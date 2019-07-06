@@ -1,0 +1,115 @@
+#volSlider .noUi-tooltip, #volSlider .noUi-handle, #volSlider .noUi-connect{
+    background-color: #607d8b !important;
+}
+
+.waves {
+    display: flex;
+    width:100%;
+}
+
+.wave { 
+    text-align: center;
+    flex-grow: 1;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.waveform { 
+    font-size: 1.3em;
+    border-bottom: 3px solid;
+    display: block;
+}
+
+.wave.Delta .waveform.active { border-color: #DD2C00  !important; }
+.wave.Theta .waveform.active { border-color: #6200EA  !important ; }
+.wave.Alpha .waveform.active { border-color: #0091EA  !important; }
+.wave.Beta .waveform.active { border-color: #00BFA5  !important; }
+.wave.Gamma .waveform.active { border-color: #FFAB00  !important; }
+.waveform { border-color: #ccc; transition: border 0.5s}
+
+
+.controls {
+    text-align: center;
+    transform: scale(1.5)
+}
+
+.controls > * {
+    margin:3px;
+}
+
+
+.pulsarWrapper {
+    margin:100px 0;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    cursor: pointer !important;
+}
+
+
+#pulsar {
+    position: absolute;
+    background: #0091EA;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    transform: translateY(-35%) scale(1);
+    z-index: -1;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    transition: all 0.5s;
+}
+
+
+#pulsar.active {
+    animation: pulsar 1s infinite;
+    animation-duration: 0.2s;
+}
+#beats {
+    font-size: 2em;
+    color: white;
+
+}
+
+@keyframes pulsar {
+    0% {
+        transform: translateY(-35%) scale(1);
+        /* box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); */
+    }
+
+    50% {
+        transform: translateY(-35%) scale(1.05);
+        /* box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); */
+    }
+
+    100% {
+        transform: translateY(-35%) scale(1);
+        /* box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); */
+    }
+} 
+
+@keyframes squeeze {
+    0% {
+        transform: translateY(-35%) scale(1);
+        /* box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); */
+    }
+    
+    25% {
+        transform: translateY(-35%) scale(1,1.1);
+        /* box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); */
+    }
+
+    50% {
+        transform: translateY(-35%) scale(1);
+        /* box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); */
+    }
+
+    75% {
+        transform: translateY(-35%) scale(1.1,1);
+        /* box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); */
+    }
+
+    100% {
+        transform: translateY(-35%) scale(1);
+        /* box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); */
+    }
+} 

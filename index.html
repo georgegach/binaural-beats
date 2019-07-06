@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/materialize.min.css">
+    <link rel="stylesheet" href="src/nouislider.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="src/jquery-3.4.1.min.js"></script>
+    <script src="src/nouislider.min.js"></script>
+    <script src="src/materialize.min.js"></script>
+    <script src="src/wNumb.min.js"></script>
+    <script src="src/bb.js"></script>
+    <title>Binaural Beats</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="pulsarWrapper">
+            <div id='pulsar'></div>
+            <div id='beats'></div>
+        </div>
+
+        <div class="waves">
+            <span class="wave Delta"><span class="waveform">Delta</span>0.5-3 Hz</span>
+            <span class="wave Theta"><span class="waveform">Theta</span>3-8 Hz</span>
+            <span class="wave Alpha"><span class="waveform">Alpha</span>8-12 Hz</span>
+            <span class="wave Beta"><span class="waveform">Beta</span>12-32 Hz</span>
+            <span class="wave Gamma"><span class="waveform">Gamma</span>32-100 Hz</span>
+        </div>
+
+        <br>
+
+        <label for="freqSlider">Frequency</label>
+        <div id="freqSlider"></div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="volumeWrapper">
+            <label for="volSlider">Volume</label>
+            <div id="volSlider" class='grey lighten-1'></div>
+        </div>
+
+
+        <br>
+        <br>
+
+        <div class="controls">
+            <a id="volDown" class="btn-floating btn-small waves-effect waves-dark btn blue-grey"><i class="material-icons left">volume_down</i></a>
+            <a id="playBtn" class="btn-floating btn-large waves-effect waves-dark btn blue-grey"><i class="material-icons left">play_arrow</i></a>
+            <a id="stopBtn" class="btn-floating btn-large waves-effect waves-dark btn blue-grey hide"><i class="material-icons left">stop</i></a>
+            <a id="volUp" class="btn-floating  btn-small waves-effect waves-dark btn blue-grey"><i class="material-icons left">volume_up</i></a>
+        </div>
+
+
+    </div>
+
+
+    <script src="src/app.js"></script>
+</body>
+
+</html>
